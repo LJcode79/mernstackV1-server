@@ -5,13 +5,14 @@ const workoutRoutes = require('./routes/workouts')
 const userRoutes = require('./routes/user')
 const cors = require('cors')
 
+//express app
+const app = express()
+
 app.use(cors({
     origin: ['http://localhost:3000/', 'https://deft-lolly-4107a7.netlify.app','*'],
     credentials: true
   }))
 
-//express app
-const app = express()
 
 //middleware
 app.use(express.json())
