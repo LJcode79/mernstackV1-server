@@ -9,7 +9,7 @@ const cors = require('cors')
 const app = express()
 
 app.use(cors({
-    origin: ['http://localhost:3000/', 'https://ljbuddy.netlify.app/','*'],
+    origin: ['http://localhost:3000/', 'https://ljbuddy.netlify.app','*'],
     credentials: true
   }))
 
