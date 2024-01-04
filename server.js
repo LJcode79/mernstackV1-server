@@ -23,9 +23,9 @@ app.use((req, res, next) => {
 })
 
 //routes
-app.get('/', (req, res) => {
-    res.send('Hey this is my API running 🥳')
-  })
+// app.get('/', (req, res) => {
+//     res.send('Hey this is my API running 🥳')
+//   })
 app.use('/api/workouts', workoutRoutes)
 app.use('/api/user', userRoutes)
 
