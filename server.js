@@ -9,10 +9,14 @@ const cors = require('cors')
 const app = express()
 
 app.use(cors({
-    origin: ['http://localhost:3000/', 'https://ljbuddy.netlify.app','*'],
-    credentials: true,
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    allowedHeaders: ['Content-Type', 'Authorization']
+    origin: [
+        'http://localhost:3000',  // Allow your local development server
+        'https://ljbuddy.netlify.app', // Allow your Netlify domain
+    ],
+    credentials: true, // Allow cookies to be sent
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Specify allowed HTTP methods
+    allowedHeaders: ['Content-Type', 'Authorization'], // Specify allowed headers
+    exposedHeaders: ['Set-Cookie'], // Add this line
   }))
 
 
