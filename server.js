@@ -10,8 +10,9 @@ const app = express()
 
 app.use(cors({
     origin: ['http://localhost:3000/', 'https://ljbuddy.netlify.app','*'],
-    credentials: true
+    credentials: true,
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    allowedHeaders: ['Content-Type', 'Authorization']
   }))
 
 
